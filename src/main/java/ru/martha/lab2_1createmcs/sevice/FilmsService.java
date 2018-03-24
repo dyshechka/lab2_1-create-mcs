@@ -58,6 +58,7 @@ public class FilmsService {
             Film film = iterator.next();
             if (id.equals(film.getId())) {
                 iterator.remove();
+                return;
             }
         }
         throw new FilmNotFoundException();
